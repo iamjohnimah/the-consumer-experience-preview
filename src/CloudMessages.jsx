@@ -1,0 +1,4 @@
+import React from 'react';
+import {ChatCircle,ArrowRight} from '@phosphor-icons/react';
+import {HOSTED_APP} from './preview.mjs';
+export default function CloudMessages(){return <><div className="page-title"><div><p className="eyebrow">YOUR FASHION CIRCLE</p><h1>Conversations.</h1><p className="intro">A personal space for your next style conversation.</p></div></div><div className="empty"><ChatCircle size={38}/><h2>Continue in your signed-in space.</h2><p>Live messages and cloud accounts stay in the private app. This public preview does not send messages or reveal member conversations.</p><a className="btn primary" href={HOSTED_APP+'#/messages'} target="_blank" rel="noreferrer">Open the signed-in app <ArrowRight/></a><p className="caption">The hosted review currently requires owner access.</p></div></>}

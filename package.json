@@ -1,0 +1,21 @@
+{
+  "name": "spreeai-consumer-experience",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 8940",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 8940",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "@radix-ui/react-dialog": "^1.1.16",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "vite": "^8.0.12"
+  }
+}

@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {mergeItems,generateLook,searchItems,costPerWear,validState,lookWithAnchor} from '../src/model.mjs';
+test('receipt re-import keeps one copy of an existing piece and deduplicates incoming rows',()=>assert.deepEqual(mergeItems([{id:'a'}],[{id:'a'},{id:'b'},{id:'b'}]),[{id:'a'},{id:'b'}]));
+test('styling excludes archived pieces and chooses one per clothing category',()=>{const items=[{id:'a',category:'Tops'},{id:'b',category:'Bottoms'},{id:'c',category:'Layers',status:'archived'},{id:'d',category:'Shoes'}];assert.deepEqual(generateLook(items,'Work'),['a','b','d'])});
+test('missing wardrobe categories never invent garments',()=>assert.deepEqual(generateLook([],'Evening'),[]));
+test('search combines query, brand and category',()=>assert.deepEqual(searchItems([{id:'a',name:'Jackie',brand:'GUCCI',category:'Bags',color:'black'},{id:'b',name:'Samba',brand:'ADIDAS',category:'Shoes'}],'BLACK','Bags','GUCCI').map(x=>x.id),['a']));
+test('cost per wear is unknown without a price or recorded wears',()=>{assert.equal(costPerWear(120,12),10);assert.equal(costPerWear(120,0),null);assert.equal(costPerWear(null,12),null)});
+test('invalid saved data does not pass the persistence boundary',()=>{assert.equal(Boolean(validState({version:1,owned:[]})),false);assert.equal(Boolean(validState(null)),false)});
+
+test('restorable local state must retain wardrobe media and collections used by every route',()=>{const state={version:1,owned:[{id:'a',name:'Blazer',image:'assets/blazer.webp'}],saved:[],looks:[],plans:[],events:[],following:[],messages:[],alerts:[],rsvps:[],profile:{name:'Alex',city:'Paris'}};assert.equal(validState(state),true);assert.equal(validState({...state,owned:[{id:'a',name:'Blazer'}]}),false);assert.equal(validState({...state,rsvps:undefined}),false);assert.equal(validState({...state,looks:[{name:'Corrupt look'}]}),false)});
+
+test('anchored outfits avoid layering a dress with a separate top and bottom',()=>{const pieces=[{id:'top',category:'Tops'},{id:'pants',category:'Bottoms'},{id:'dress',category:'Dresses'},{id:'layer',category:'Layers'}],get=id=>pieces.find(p=>p.id===id);assert.deepEqual(lookWithAnchor(['top','pants','layer'],get('dress'),get),['layer','dress']);assert.deepEqual(lookWithAnchor(['dress','layer'],get('top'),get),['layer','top'])});

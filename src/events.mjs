@@ -1,0 +1,15 @@
+export const officialEvents=[
+ {id:'fhcm-women-ss27',name:'Paris Fashion Week · Womenswear Spring/Summer 2027',host:'Fédération de la Haute Couture et de la Mode',city:'Paris',date:'2026-09-28',endDate:'2026-10-06',source:'https://www.fhcm.paris/en/upcoming-seasons-and-previous-editions'},
+ {id:'fhcm-men-fw27',name:'Paris Fashion Week · Menswear Fall/Winter 2027–28',host:'Fédération de la Haute Couture et de la Mode',city:'Paris',date:'2027-01-19',endDate:'2027-01-24',source:'https://www.fhcm.paris/en/upcoming-seasons-and-previous-editions'},
+ {id:'fhcm-couture-ss27',name:'Haute Couture Week · Spring/Summer 2027',host:'Fédération de la Haute Couture et de la Mode',city:'Paris',date:'2027-01-25',endDate:'2027-01-28',source:'https://www.fhcm.paris/en/upcoming-seasons-and-previous-editions'},
+ {id:'cfda-nyfw-fw27',name:'New York Fashion Week · Fall/Winter 2027',host:'CFDA Fashion Calendar',city:'New York',date:'2027-02-08',endDate:'2027-02-12',source:'https://fashioncalendar.com/'},
+ {id:'fhcm-women-fw27',name:'Paris Fashion Week · Womenswear Fall/Winter 2027–28',host:'Fédération de la Haute Couture et de la Mode',city:'Paris',date:'2027-03-01',endDate:'2027-03-09',source:'https://www.fhcm.paris/en/upcoming-seasons-and-previous-editions'}
+].map(e=>({...e,official:true,checked:'2026-10-05',type:'Official fashion calendar',time:'',place:'Individual venues and access are listed by the organizer.',description:'Explore the organizer’s published season dates and calendar. Individual shows can require an invitation. Saving this date does not reserve admission.'}));
+const escape=s=>String(s||'').replaceAll('\\','\\\\').replaceAll('\r','').replaceAll('\n','\\n').replaceAll(',','\\,').replaceAll(';','\\;');
+export function eventCalendar(e,now=new Date()){
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(e.date)||!Number.isFinite(Date.parse(e.date)))throw Error('This event has no valid date.');
+ const allDay=e.official||!e.time;let dates;
+ if(allDay){const end=new Date((e.endDate||e.date)+'T00:00:00Z');if(!Number.isFinite(+end)||end<new Date(e.date+'T00:00:00Z'))throw Error('This event has no valid end date.');end.setUTCDate(end.getUTCDate()+1);dates=`DTSTART;VALUE=DATE:${e.date.replaceAll('-','')}\r\nDTEND;VALUE=DATE:${end.toISOString().slice(0,10).replaceAll('-','')}`}
+ else{if(!/^([01]\d|2[0-3]):[0-5]\d$/.test(e.time))throw Error('This event has no valid time.');dates=`DTSTART:${e.date.replaceAll('-','')}T${e.time.replace(':','')}00`}
+ return `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//SPREEAI//Consumer Experience//EN\r\nBEGIN:VEVENT\r\nUID:${escape(e.id)}@spreeai-preview\r\nDTSTAMP:${now.toISOString().replace(/[-:]/g,'').split('.')[0]}Z\r\n${dates}\r\nSUMMARY:${escape(e.name+(e.official?'':' (preview event)'))}\r\nLOCATION:${escape(e.city+' · '+e.place)}\r\nDESCRIPTION:${escape(e.official?'Organizer calendar. No reservation or admission. Source: '+e.source:'Local preview event. No real reservation.')}\r\n${e.source?'URL:'+e.source+'\r\n':''}END:VEVENT\r\nEND:VCALENDAR\r\n`;
+}
