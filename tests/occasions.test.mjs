@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {generateLook} from '../src/model.mjs';
+import {occasionLook,toolsState} from '../src/wardrobeTools.mjs';
+const pieces=[{id:'shirt',name:'Silk shirt',category:'Tops'},{id:'trousers',name:'Tailored trousers',category:'Bottoms'},{id:'dress',name:'Cocktail dress',category:'Dresses'},{id:'sneakers',name:'Everyday sneakers',category:'Shoes'},{id:'tee',name:'Training tee',category:'Tops'},{id:'track',name:'Track pants',category:'Bottoms'},{id:'old',name:'Training shorts',category:'Bottoms',status:'archived'}];
+test('date, dinner and formal plans use evening silhouettes; work and weekends use separates',()=>{for(const occasion of ['Date night','Dinner','Wedding','Party','Special event'])assert.ok(generateLook(pieces,occasion).includes('dress'));for(const occasion of ['Work','Job interview','Weekend','Brunch']){const look=generateLook(pieces,occasion);assert.ok(look.includes('shirt'));assert.ok(look.includes('trousers'));assert.ok(!look.includes('dress'));}});
+test('workout suggestions exclude formalwear and unavailable training pieces, without inventing a fallback',()=>{assert.deepEqual(generateLook(pieces,'Workout'),['tee','track','sneakers']);assert.deepEqual(generateLook(pieces.filter(p=>['shirt','dress','trousers'].includes(p.id)),'Workout'),[]);const tools=toolsState({availability:{track:'In the laundry'}});assert.deepEqual(occasionLook(pieces,'Workout',tools),['tee','sneakers']);});

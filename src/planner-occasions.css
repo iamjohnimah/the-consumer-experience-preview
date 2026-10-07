@@ -1,0 +1,15 @@
+.planner-occasions{padding:24px;background:var(--surface);border:1px solid var(--line);border-radius:16px;margin:8px 0 24px;}
+.planner-occasions-heading h2{font-size:24px;line-height:1.2;letter-spacing:-.02em;margin:0 0 6px;}
+.planner-occasions-heading p{font-size:17px;color:var(--muted);margin:0 0 18px;line-height:1.4;}
+.planner-occasion-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;}
+.planner-occasion-options .btn{justify-content:flex-start;gap:10px;padding:12px 14px;font-size:18px;min-height:52px;background:var(--paper);border-color:var(--line);color:var(--ink);}
+.planner-occasion-options .btn>span{min-width:0;text-align:left;flex:1;}
+.planner-occasion-options .btn>svg{flex-shrink:0;width:20px;height:20px;}
+.planner-occasion-options .btn>svg:last-child{width:16px;height:16px;color:var(--muted);}
+.planner-occasion-options .btn:hover{border-color:var(--ink);background:var(--accent);}
+.planner-occasion-options .btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px;}
+.planned-occasion{display:block;font-size:14px;color:var(--muted);margin:0 0 12px;}
+.plan-occasion-help{font-size:15px;color:var(--muted);line-height:1.4;}
+.plan-suggest-action{margin:6px 0 20px;}
+@media(max-width:1150px){.planner-occasion-options{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){.planner-occasions{padding:18px;}.planner-occasions-heading h2{font-size:23px;}.planner-occasion-options{gap:8px;}.planner-occasion-options .btn{font-size:16px;padding:12px 10px;gap:8px;}.planner-occasion-options .btn>svg:last-child{display:none;}}
