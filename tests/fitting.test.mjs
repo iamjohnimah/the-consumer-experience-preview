@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {fittingConfig,fittingRequest,renderTwin,recommendSize,uploadPhoto,fittingError} from '../src/fitting.mjs';
+import {fittingConfig,fittingRequest,renderTwin,recommendSize,uploadPhoto,fittingError,loadTwins} from '../src/fitting.mjs';
 
 test('fitting sessions stay scoped to the garment collection and carry only shopper credentials',async()=>{
  const original=globalThis.fetch,calls=[];
@@ -19,3 +19,13 @@ test('unsupported sizing and invalid photo uploads fail before transmission',asy
  const original=globalThis.fetch;let called=false;globalThis.fetch=async()=>{called=true;throw Error('Unexpected request')};try{await assert.rejects(recommendSize({category:'Bags'},{height:170,weight:58}),/unavailable/);await assert.rejects(uploadPhoto({},new File(['bad'],'bad.txt',{type:'text/plain'})),/JPG/);assert.equal(called,false)}finally{globalThis.fetch=original}
 });
 test('missing back assets preserve an understandable front-preview path',()=>{assert.match(fittingError('variant has no back_flat image'),/front preview is still available/);assert.match(fittingError('variant failed processing'),/still being prepared/)});
+test('profile and fitting reuse preset Twins only within the same collection and never cache an aborted request',async()=>{
+ const original=globalThis.fetch,calls=[];
+ globalThis.fetch=async(url)=>{calls.push(url);return Response.json(url.endsWith('/v1/user/guest')?{access_token:'guest',expires_in:1800}:{avatars:[{id:'preset',name:'Preset Twin'}]})};
+ try{
+  const a={partnerId:'preset-cache-a'},b={partnerId:'preset-cache-b'};
+  assert.equal((await loadTwins(a))[0].id,'preset');await loadTwins(a);await loadTwins(b);
+  assert.equal(calls.filter(u=>u.includes('/v1/avatars')).length,2);
+  const c=new AbortController();c.abort();await assert.rejects(loadTwins(a,c.signal),{name:'AbortError'});
+ }finally{globalThis.fetch=original}
+});

@@ -26,5 +26,9 @@ Product images, brand marks and product links identify their respective owners. 
 - Comments, votes, follows, room memberships and posts are functional device previews; none are published to other viewers.
 - Planner shows a Monday-first week of suggestions, using owned pieces when present and available weather forecasts. Without a wardrobe, suggestions are labeled examples from the catalog. Plan my week preserves existing plans; individual plans can be edited.
 - Official events link to organizers. Sample meetups show explicitly labeled sample attendance, and local RSVPs adjust that count. No real booking or verified attendance feed is implied.
-- SPREEAI Plus is proposed at $20/month; checkout remains disabled. No payment or subscription is created.
+- SPREEAI Plus is proposed at $20/month; checkout is not connected. No payment or subscription is created.
 - No opening onboarding. Profile and the footer offer How it works. Mobile More includes all destinations, Wishlist, Plus, appearance and the guide.
+
+## Latest design review
+
+The desktop and mobile layouts now use consistent SPREEAI typography, clearer page instructions, contextual help and compact secondary tools. Sideways creator and preview rows include explicit arrow controls. Freja’s home film plays muted on an automatic loop without a caption or playback button.

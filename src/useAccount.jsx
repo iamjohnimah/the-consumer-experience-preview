@@ -6,6 +6,8 @@ export function useAccount(state,setState) {
  const latest=useRef(state);latest.current=state;
  function save(){try{persistPreview(localStorage,latest.current);setSaveStatus('Saved in this browser')}catch{setSaveStatus('Browser storage is full or unavailable. Export your wardrobe from Profile to keep a copy.')}}
  useEffect(()=>{const timer=setTimeout(save,300);return()=>clearTimeout(timer)},[state]);
+ // Flush pending device changes before a fast refresh or leaving the page.
+ useEffect(()=>{const hidden=()=>{if(document.hidden)save()};window.addEventListener('pagehide',save);document.addEventListener('visibilitychange',hidden);return()=>{window.removeEventListener('pagehide',save);document.removeEventListener('visibilitychange',hidden)}},[]);
  const account={status:'ready',enabled:true,local:true,user:{id:'browser-preview',name:state.profile.name}},social=previewSocial(state);
  async function action(path,body){setState(s=>previewAction(s,path,body));return {saved:true}}
  async function publish(post){const entry={...post,id:crypto.randomUUID(),authorId:'browser-preview',name:state.profile.name,created:Date.now()};setState(s=>({...s,posts:[entry,...(s.posts||[])]}));return entry}
