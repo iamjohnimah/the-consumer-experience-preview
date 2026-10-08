@@ -39,3 +39,11 @@ The desktop and mobile layouts now use consistent SPREEAI typography, clearer pa
 - A photo’s original bytes are kept in IndexedDB, separate from local wardrobe metadata and exports. Reloading recreates a local image and uploads it to the appropriate garment collection only when the visitor requests a try-on. No expiring service link is used as the saved photo.
 - Choosing a photo or Twin inside the fitting room updates the same saved profile. Replacing it or removing it replaces the device copy. This public preview does not provide cross-device cloud photo sync; clearing browser data removes the saved profile.
 - The fitting dialog uses the website’s neutral palette in light and dark mode. A completed API job is shown as ready only after its actual image loads. Delivery retries preserve the request; staging recovery is limited to the exact unsigned render key on the known staging origin.
+
+## Single-click fitting and readable photo controls
+
+- The profile upload uses the same primary-button styling as the rest of SPREEAI, including contrasting labels and icons in light and dark mode.
+- Try it on opens the fitting room and starts the requested front, back or video preview using the saved fitting perspective. With no available perspective, choosing a photo or Twin continues the original request without another Try on click.
+- Saving a profile still never uploads a photo or starts a render. Duplicate starts are prevented while a fitting operation is running. Retry and new-view controls remain available when needed.
+- Verified the production build at desktop and 375px mobile: the reported Hugo Boss dress rendered successfully on a selected Twin, a saved Twin, and a saved generated-adult photo after reload. Each entry issued exactly one try-on POST; the saved-photo path issued exactly one upload POST. Profile save issued zero uploads or renders.
+- All 64 automated checks and the production build pass. These checks cover the requested client changes, not a new catalog-wide backend certification.
