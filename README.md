@@ -32,3 +32,10 @@ Product images, brand marks and product links identify their respective owners. 
 ## Latest design review
 
 The desktop and mobile layouts now use consistent SPREEAI typography, clearer page instructions, contextual help and compact secondary tools. Sideways creator and preview rows include explicit arrow controls. Freja’s home film plays muted on an automatic loop without a caption or playback button.
+
+## Saved fitting profile
+
+- Profile photos and Twins now use one shared fitting perspective across shopping, discovery, outfits and the header avatar. Saving a profile never starts a try-on. Changing the perspective clears previous in-memory previews.
+- A photo’s original bytes are kept in IndexedDB, separate from local wardrobe metadata and exports. Reloading recreates a local image and uploads it to the appropriate garment collection only when the visitor requests a try-on. No expiring service link is used as the saved photo.
+- Choosing a photo or Twin inside the fitting room updates the same saved profile. Replacing it or removing it replaces the device copy. This public preview does not provide cross-device cloud photo sync; clearing browser data removes the saved profile.
+- The fitting dialog uses the website’s neutral palette in light and dark mode. A completed API job is shown as ready only after its actual image loads. Delivery retries preserve the request; staging recovery is limited to the exact unsigned render key on the known staging origin.

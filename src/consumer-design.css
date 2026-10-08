@@ -34,3 +34,12 @@
 
 .modal .fitting-gallery{min-width:0;max-width:100%}.modal .fitting-placeholder{max-width:100%;overflow-wrap:anywhere}
 @media(max-width:700px){.modal .native-fitting-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* The dialog uses the same neutral surfaces as the website, independent of button classes. */
+.modal.fitting{width:min(1160px,calc(100vw - 48px));background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.modal.fitting .fitting-heading{padding-right:44px}.modal.fitting .fitting-heading h2{font-weight:400;font-size:clamp(30px,3vw,42px)}
+.modal.fitting .fitting-primary{justify-content:center;min-height:50px}.modal.fitting .fitting-primary img{filter:invert(1)}.modal.fitting.dark .fitting-primary img{filter:none}
+.modal.fitting .identity-summary{background:var(--paper)}.modal.fitting .identity-summary img{flex-shrink:0}.modal.fitting .button-row{flex-wrap:wrap}
+.modal.fitting .fitting-zoom{position:static;transform:none;margin:12px 0;max-width:none;justify-content:center}
+.modal.fitting .fitting-thumbnails .scroll-row-track{align-items:stretch}.modal.fitting .fitting-thumbnails button{white-space:normal;min-width:96px}
+@media(max-width:700px){.modal.fitting{width:calc(100% - 20px)}.modal.fitting .fitting-heading{padding-right:32px}.modal.fitting .native-fitting-grid{gap:20px}}
