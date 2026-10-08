@@ -237,3 +237,22 @@
 .redesigned-week .day>.between{min-height:66px;align-items:center}
 
 .scroll-row-shell{min-width:0}.scroll-row-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0 8px;color:var(--muted);font-size:16px}.scroll-row-controls>div{display:flex;gap:6px}.scroll-row-controls .icon-button{width:40px;height:40px;min-height:40px;border:1px solid var(--line);background:var(--surface);border-radius:50%;color:var(--ink)}.scroll-row-controls .icon-button:disabled{opacity:.35;cursor:default}.scroll-row-shell>[role="region"]{scrollbar-width:thin;scrollbar-color:var(--muted) var(--panel)}.scroll-row-shell>[role="region"]:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+
+/* Personal previews stay in the product's original image area. */
+.inline-preview-photo { position:relative; min-width:0; }
+.inline-preview-photo>video { width:100%; height:100%; object-fit:contain; }
+.inline-preview-photo .render-overlay { z-index:2; }
+.inline-preview-photo .render-overlay img { width:160px; height:auto; }
+.inline-preview-empty { display:grid; justify-items:center; text-align:center; gap:14px; padding:32px; color:var(--ink); }
+.inline-preview-empty>svg { width:42px; height:42px; }
+.inline-preview-empty p { color:var(--muted); }
+.inline-preview-credit { text-align:center; margin:14px 0; }
+.inline-perspective-picker { padding:22px; border:1px solid var(--line); border-radius:12px; background:var(--surface); margin-top:20px; }
+.inline-perspective-picker h3 { margin:0 0 8px; }
+.inline-perspective-picker .twin-options { margin-top:20px; }
+.inline-perspective-picker .fitting-photo-input { margin-top:18px; }
+.product-actions .inline-perspective-action { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:8px 0 14px; flex-wrap:wrap; }
+.product-actions .inline-perspective-action .small-link { font-size:15px; }
+@media(max-width:600px){.inline-perspective-picker{padding:18px}.inline-perspective-picker .twin-options{grid-template-columns:repeat(3,minmax(0,1fr));max-height:300px}.inline-preview-photo .render-overlay{padding:18px}.inline-preview-photo .render-overlay img{width:125px}}
+
+.inline-save-preview{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 auto 18px}.inline-save-preview svg{width:18px;height:18px}

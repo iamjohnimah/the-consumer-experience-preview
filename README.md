@@ -47,3 +47,9 @@ The desktop and mobile layouts now use consistent SPREEAI typography, clearer pa
 - Saving a profile still never uploads a photo or starts a render. Duplicate starts are prevented while a fitting operation is running. Retry and new-view controls remain available when needed.
 - Verified the production build at desktop and 375px mobile: the reported Hugo Boss dress rendered successfully on a selected Twin, a saved Twin, and a saved generated-adult photo after reload. Each entry issued exactly one try-on POST; the saved-photo path issued exactly one upload POST. Profile save issued zero uploads or renders.
 - All 64 automated checks and the production build pass. These checks cover the requested client changes, not a new catalog-wide backend certification.
+
+### Product-window fitting update — 2026-10-08
+
+Try-on starts in the existing product gallery, using the saved photo or Twin. Product details, retailer offers and the action panel stay in place. Size and fit, comparison, styling and outfit building open separate modules; closing them returns to the product. X, Escape and outside dismissal remain available during rendering. Closing stops this browser's polling without issuing a backend render-cancellation request.
+
+Verified live on desktop and at 375 px in dark mode: a Twin preview, a persisted generated-adult photo after reload, reuse on a second garment without another upload, loading-state exit, module return paths, decoded result images and no horizontal overflow. Existing 64 automated checks pass; the production build succeeds. Save-preview and the existing product/model/back/video gallery controls remain available.
