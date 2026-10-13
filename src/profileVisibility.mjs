@@ -1,0 +1,3 @@
+export function visibleProfilePosts(posts,{visitor=false,privateProfile=true}={}){return posts.filter(post=>!visitor||!privateProfile||post.sample===true)}
+export function visibleClosetPieces(pieces,sharedIds,{visitor=false}={}){const shared=new Set(sharedIds||[]);return visitor?pieces.filter(piece=>shared.has(piece.id)):pieces}
+export function publicClosetPiece(piece){const fields=['id','name','brand','category','image','model','images','source','color','sizes','garmentId','garmentIds','partnerId','sizingReady','gender'];return Object.fromEntries(fields.filter(key=>piece[key]!==undefined).map(key=>[key,piece[key]]))}
