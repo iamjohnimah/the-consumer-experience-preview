@@ -1,3 +1,7 @@
+# Latest preview changes — October 13, 2026
+
+This update supersedes the earlier description below: Today now plays the original Freya film with no caption or outfit-film creation prompt. The dedicated personal-film flow has been removed. Discover shows credited, embedded publisher films from Vogue and CHANEL, including three Kim Kardashian features and Zendaya. It is a curated feed, not a connected Instagram account or continuously refreshed social feed. Today garment recommendations reshuffle on every visit. Connected Stores is removed from navigation. Save buttons reuse the public SPREEAI Shop six-heart effect and its reduced-motion fallback. 68 tests and the production build pass.
+
 # SPREEAI consumer MVP — October 13, 2026
 
 ## Delivered in this package

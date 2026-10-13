@@ -1,0 +1,1 @@
+export function nextFeatured(items,previous=[],random=Math.random,count=4){const pool=items.filter(p=>p.garmentId);for(let i=pool.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}let result=pool.slice(0,count).map(p=>p.id);if(pool.length>count&&result.every((id,i)=>id===previous[i]))result=[pool[count].id,...result.slice(1)];return result;}
