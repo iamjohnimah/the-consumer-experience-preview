@@ -3,3 +3,9 @@ dist/
 qa-artifacts/
 .env*
 .DS_Store
+
+# Native build output and user-specific Xcode state
+ios/App/App/public/
+ios/App/App/capacitor.config.json
+ios/App/build/
+**/xcuserdata/

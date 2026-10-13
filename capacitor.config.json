@@ -1,0 +1,8 @@
+{
+  "appId": "com.spreeai.consumer",
+  "appName": "SPREEAI",
+  "webDir": "dist",
+  "ios": {
+    "contentInset": "automatic"
+  }
+}

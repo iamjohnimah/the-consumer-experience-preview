@@ -1,3 +1,7 @@
+# October 13 consumer MVP update
+
+Start with [MVP-HANDOFF.md](MVP-HANDOFF.md) for current features, limitations, iPhone setup and TestFlight steps. This package uses the pinned pnpm lockfile. Legacy npm setup instructions below describe the earlier web-only preview.
+
 # The Consumer Experience — public preview
 
 SPREEAI's responsive wardrobe, fashion discovery and shopping experience. This repository is a clean public frontend, without the private hosted backend or its history.

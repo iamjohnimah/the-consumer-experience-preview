@@ -1,22 +1,27 @@
 {
   "name": "spreeai-consumer-experience",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 8940",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1 --port 8940",
     "test": "node --test tests/*.test.mjs",
-    "catalog:import": "node scripts/import-retailer-feed.mjs"
+    "catalog:import": "node scripts/import-retailer-feed.mjs",
+    "ios:sync": "npm run build && cap sync ios",
+    "ios:open": "cap open ios"
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.1.10",
-    "@radix-ui/react-dialog": "^1.1.16",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "@phosphor-icons/react": "2.1.10",
+    "@radix-ui/react-dialog": "1.1.23",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "@capacitor/core": "8.5.3",
+    "@capacitor/ios": "8.5.3"
   },
   "devDependencies": {
-    "vite": "^8.0.12"
+    "vite": "8.0.13",
+    "@capacitor/cli": "8.5.3"
   }
 }
