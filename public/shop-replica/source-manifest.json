@@ -1,0 +1,74 @@
+[
+  {
+    "source": "https://spreeai.com/shop/online/assets/index-oMclJJV1.js",
+    "sha256": "7f118987db71729cc3074eb6a3a9afe9171d6169b02f7756fbea4bb9267022db"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/assets/App-BHb0qeXa.js",
+    "sha256": "86f262b92b20663f43570438027ac2056347780e9893758c64f9e433281b7821"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/assets/Stylist-Bof_9um8.js",
+    "sha256": "d4a74cd61168a6b94df29599d038c9ae51924a87b86241eb5aedcd26bf437843"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/assets/FitCompare-C3hEUqwS.js",
+    "sha256": "76c0b04250ff81cc3e66cc9196cbcac583a64db53fddab9a2173e683e27b7a3c"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/assets/MediaThumbnail-lNa_yh0U.js",
+    "sha256": "db1c56e27d57d4b39f397fd755f76206157650bceb9836d8818a81aef5f30e2a"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/assets/style-DHCktA0V.css",
+    "sha256": "516eef3e7a458ea5c4eec2a67a9e222b0f69c309e66525692cdcfcf7bd21624e"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/collection/app.js",
+    "sha256": "3c9f095d1bd25cb0ade03b9d46cd9541179fd627562cfc341a5780c18fdd7049"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/collection/style.css",
+    "sha256": "b660705b60cc837d1640b4d60a0dac0cb7b6ef4067732e0551f7fcdda3087f7b"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/collection/elevated.css",
+    "sha256": "4bf5c4f1a4ecb53a4961aa4c88d83e5d7515ecde9c36c71703d1b11ee86b78ef"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/collection/footer-standard.css",
+    "sha256": "db7f8bb17186660f0b2047b536eee37ae6c4fb7369409b78dc181d5b35472b2b"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/collection/refinement.css",
+    "sha256": "bb1151eef228cadbffaf5217b42b3257ad2f37271439b43a89476bb595eeb3b6"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/collection/polish.css",
+    "sha256": "090527fd7432e71cee4ed8e8dfbd0cc5e9dfae0f63e80e36a300009ade8e273a"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/collection/qa-refinements.css",
+    "sha256": "b94205ce08fec6f910000329a5a49c733809b41ef0a5a077fa008b294837e7dd"
+  },
+  {
+    "source": "https://spreeai.com/shop/online/collection/catalog.json",
+    "sha256": "d0ccc89d9a3d3c650ea170932bce54bf625e86862396a06b256e106aaa57d10f"
+  },
+  {
+    "source": "https://spreeai.com/shop/shop-menu.css",
+    "sha256": "0d09f60d80144aee128861bfd74ffab9c092e48ca683ff442f9576ad8639b91e"
+  },
+  {
+    "source": "https://spreeai.com/shop/shop-menu.js",
+    "sha256": "8bae258c9b0b4ff99c24cacad7a40b24d21957c4234f6cf298e1d590173b4c38"
+  },
+  {
+    "source": "https://spreeai.com/shop/website-navigation.js",
+    "sha256": "5cc9abbf05685a214f19cf4d02f458ef93c0627c0ba94b821d355d46757f2fdc"
+  },
+  {
+    "source": "https://spreeai.com/shop/footer-layout.css",
+    "sha256": "99c69cfac4a4ab35d1f1afcd4487a04355d28c11e7790d1a6d6bb3130d8f61fe"
+  }
+]

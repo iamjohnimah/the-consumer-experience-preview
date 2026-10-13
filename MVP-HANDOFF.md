@@ -1,3 +1,11 @@
+## Shop replica update — 2026-10-13
+
+Shop now reuses a pinned copy of the original public SPREEAI Shop frontend under `public/shop-replica`, inside the consumer shell. This supersedes the earlier Shop-inspired implementation notes below. The original collection grid, all 680 catalog product pages, inline outfit builder, comparison, profile/size controls, finishing-piece selector and motion are preserved. Navigation and asset locations are adapted for localhost, GitHub Pages and the packaged web app. Original hosted media and demo API capabilities require network access.
+
+Every Shop entry creates a fresh collection document. The original per-visit random ranks shuffle the collection while preserving order during filters and background catalog updates. The Shop browser-storage namespace is separate from the consumer closet/profile namespace. A shared source component integration and unified persistence are future engineering work; this is a pinned frontend snapshot rather than an automatic reflection of later public-site changes.
+
+Source URLs and original checksums are in `public/shop-replica/source-manifest.json`. Intentional refresh helper: `scripts/sync-shop-reference.py`. No service, credentials, production deployment configuration or capability flags were changed.
+
 # Consumer social expansion — October 13, 2026
 
 Discover contains 28 posts, including 25 fashion/editorial/humor items and the existing community/event cards. Eight added publisher videos, six editorial image features and three original SPREEAI fashion-humor cards broaden the feed. Ten real external communities (Vogue Club and nine Reddit communities) are linked from Community, alongside BANU’s Table & Wardrobe, Manila Style Circle and the SPREEAI Circle. Preview follows are local and do not create external memberships. Group creation accepts a thumbnail; existing preview circles can customize and restore their artwork.

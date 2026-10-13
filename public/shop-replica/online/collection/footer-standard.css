@@ -1,0 +1,36 @@
+/* One footer scale on every route; social, wordmark and legal match Always On. */
+body footer.site-footer{padding:38px clamp(24px,4.5vw,88px) 0;background:#fff;color:#24221f;border-top:1px solid #e3dfd9;font-family:Afacad,Arial,sans-serif}
+body .site-footer .footer-thesis{padding:0 0 30px;margin:0;border-bottom:1px solid #e3dfd9;display:flex;align-items:center;justify-content:space-between;gap:24px}
+body .site-footer .footer-thesis h2{font-family:inherit;font-size:clamp(30px,3.2vw,48px);font-weight:400;line-height:1.1;letter-spacing:-.025em;margin:0;max-width:none}
+body .site-footer .footer-thesis>a{font-size:16px;min-height:44px;display:inline-flex;align-items:center}
+body .site-footer .footer-grid{padding:30px 0;margin:0;gap:35px;display:grid;grid-template-columns:1fr 1fr}
+body .site-footer .footer-column h2,body .site-footer .footer-follow h2{font:400 14px/1.3 Afacad,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:0 0 16px;color:#675f55}
+body .site-footer .footer-column nav{gap:7px 20px}body .site-footer .footer-column nav a{font-size:17px;line-height:1.3;min-height:30px}
+body .site-footer .footer-join p{font-size:17px;line-height:1.4;margin:0 0 18px;max-width:320px}
+body .site-footer .footer-actions{gap:9px}body .site-footer .footer-button{font-size:16px;min-height:44px;padding:10px 17px}
+body .site-footer .footer-follow{padding:20px 0 0;border-top:1px solid #e3dfd9;display:flex;align-items:center;gap:24px;text-align:left;width:100%}
+body .site-footer .footer-follow h2{margin:0;flex:0 0 auto;width:auto}body .site-footer .footer-socials{display:flex;gap:20px;align-items:center}
+body .site-footer .footer-socials a{width:30px;height:44px;display:inline-flex;align-items:center;justify-content:flex-start;border:0;border-radius:0;background:none;padding:0;color:#24221f}
+body .site-footer .footer-socials svg{width:17px;height:17px}
+body .site-footer .footer-logo{display:block;width:100%;margin:0;padding:30px 0;overflow:visible;line-height:0}
+body .site-footer .footer-logo img{width:100%;height:auto;max-height:190px;object-fit:contain;filter:none}
+body .site-footer .footer-legal{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:24px 0 32px;margin:0;border-top:1px solid #e3dfd9;font-size:14px;line-height:1.4;color:#727272}
+body .site-footer .footer-legal p,body .site-footer .footer-legal a,body .site-footer .footer-legal button{font:inherit;margin:0;letter-spacing:normal}
+body .site-footer .footer-legal nav{display:flex;flex-wrap:wrap;gap:14px 28px}.site-footer .language-trigger{margin-left:auto}
+@media(max-width:800px){body .site-footer .footer-grid{grid-template-columns:1fr 1fr;gap:25px}body .site-footer .footer-join{grid-column:1/-1}body .site-footer .footer-thesis{align-items:flex-start;flex-direction:column;gap:12px}body .site-footer .footer-thesis h2{font-size:34px}body .site-footer .footer-logo{padding:25px 0}body .site-footer .footer-logo img{max-height:100px}body .site-footer .footer-follow{flex-wrap:wrap;gap:12px 20px}body .site-footer .footer-socials{gap:14px}body .site-footer .footer-legal{align-items:flex-start;flex-direction:column;font-size:13px;gap:14px}body .site-footer .footer-legal nav{gap:12px 20px}body .site-footer .language-trigger{margin-left:auto}}
+@media(max-width:440px){body .site-footer .footer-follow h2{width:100%}body .site-footer .language-trigger{margin-left:0}body .site-footer .footer-thesis h2{font-size:32px}}
+
+@media(max-width:520px){body .site-footer .footer-column nav{grid-template-columns:1fr}}
+
+/* Keep Explore and Connect grouped together on wide screens. */
+body .site-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,240px));column-gap:clamp(24px,4vw,64px);justify-content:start}
+body .site-footer .footer-column nav{grid-template-columns:1fr}
+
+.site-release{display:block;font-size:11px;letter-spacing:.04em;opacity:.65;white-space:nowrap;margin-top:8px}
+
+/* Preserve pill geometry for the navigable homepage experiences. */
+body .experience-tabs button{display:block;text-align:center;text-decoration:none;font-size:18px;padding:10px 30px;min-height:44px;border-radius:100px;color:#675f55}
+body .experience-tabs button[data-preview-active=true]{background:#fff;color:#24221f;box-shadow:0 2px 5px #32281b08}
+@media(max-width:800px){body .experience-tabs button{padding:9px 20px;font-size:17px;flex:1}}
+@media(max-width:600px){body .experience-tabs button{font-size:16px;padding:10px 16px}}
+body .site-footer .footer-socials{flex-wrap:wrap}
