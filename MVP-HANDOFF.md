@@ -1,3 +1,7 @@
+# Discover mixed feed update — October 13, 2026
+
+Discover now presents one centered post per row on desktop and mobile. Eleven curated posts mix Wisdom Kaye (Teen Vogue), Law Roach (creator video), John Imah (Vogue Portugal), SPREEAI brand footage, Kim Kardashian, Zendaya, CHANEL, two example community circles, and the verified November 2, 2026 CFDA Fashion Awards at the American Museum of Natural History. Publisher images remain remote, videos use original embeds, and cards retain source attribution and links. Community circles are independent preview concepts; joins and discussion drafts persist locally without invented members, comments or Vogue affiliation. Saving the CFDA card bookmarks it locally; it does not register for the event.
+
 # Latest preview changes — October 13, 2026
 
 This update supersedes the earlier description below: Today now plays the original Freya film with no caption or outfit-film creation prompt. The dedicated personal-film flow has been removed. Discover shows credited, embedded publisher films from Vogue and CHANEL, including three Kim Kardashian features and Zendaya. It is a curated feed, not a connected Instagram account or continuously refreshed social feed. Today garment recommendations reshuffle on every visit. Connected Stores is removed from navigation. Save buttons reuse the public SPREEAI Shop six-heart effect and its reduced-motion fallback. 68 tests and the production build pass.
