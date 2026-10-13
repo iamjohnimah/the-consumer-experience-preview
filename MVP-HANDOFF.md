@@ -1,3 +1,11 @@
+## Native consumer Shop, Discover and profile update — 2026-10-13
+
+Supersedes the iframe Shop notes below. The approved 680-piece collection layout now renders as consumer React components. Garment pages mount the original product/outfit components directly into the consumer DOM with scoped styles and an in-memory navigation adapter. No Shop iframe, website menu/header, retailer account navigation or marketing footer appears. Product profile actions open the complete consumer profile editor. Original fitting APIs and capability availability remain unchanged. Shop renders original garment media from its public host and randomizes once per visit.
+
+Edit Profile includes a separate profile picture, editable name/bio/location/privacy, original fitting-photo controls, available AI Twins, metric/imperial measurements, usual size and additional measurements. Profile details and fitting profile have separate explicit saves.
+
+Discover supports independent likes, persisted comments with deletion, shareable per-post URLs and reversible reposts with a Reposts view. These interactions remain local to this public preview; live member social delivery is not connected.
+
 ## Shop replica update — 2026-10-13
 
 Shop now reuses a pinned copy of the original public SPREEAI Shop frontend under `public/shop-replica`, inside the consumer shell. This supersedes the earlier Shop-inspired implementation notes below. The original collection grid, all 680 catalog product pages, inline outfit builder, comparison, profile/size controls, finishing-piece selector and motion are preserved. Navigation and asset locations are adapted for localhost, GitHub Pages and the packaged web app. Original hosted media and demo API capabilities require network access.
