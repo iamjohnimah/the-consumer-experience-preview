@@ -17,7 +17,7 @@ Run `npm run dev` from this project. Review http://127.0.0.1:8940/#/today.
 - Profile: removed the Fitting profile/imports/preferences dropdown and the top Profile/search strip; removed the top-right moon, wishlist, and avatar controls. The bottom-left Profile entry opens the profile and displays the saved photo or Twin; the example portrait is shown before a selection. Full-width portrait header, blue glowing scalloped verification design, expanded demo bio/location/username, centered highlights, 1.2M demo followers, 328 following, 64 looks, and seven pieces. Removed verification requests, creator-space section, shared-closet tab, and caption/upload prompt. Editorial inspiration posts and Twin preview looks replace garment-only content. Visitor mode hides owner controls and settings.
 - Edit profile: fitting/photo/Twin setup at the top, followed by editable name, username, city, region, country, bio, and website/social link. Removed duplicate profile-picture control.
 
-Sidebar branding uses the full SPREEAI wordmark. Appearance is available under Settings in the footer and mobile More menu, with persistent Light/Dark choices.
+Sidebar branding uses the full SPREEAI wordmark. The global top search/help/status strip is removed; search remains within Shop and Closet. Appearance is available under Settings in the footer and mobile More menu, with persistent Light/Dark choices.
 
 ## Media provenance
 
