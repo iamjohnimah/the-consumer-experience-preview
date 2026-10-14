@@ -1,10 +1,14 @@
-import {useEffect,useState} from 'react';
+import {useEffect,useState,useRef} from 'react';
 import {normalizeForecast} from './weather.mjs';
 const cache=new Map();
 const known={paris:{latitude:48.8534,longitude:2.3488,name:'Paris',country:'France'},london:{latitude:51.5085,longitude:-.1257,name:'London',country:'United Kingdom'},'new york':{latitude:40.7143,longitude:-74.006,name:'New York',country:'United States'},'los angeles':{latitude:34.0522,longitude:-118.2437,name:'Los Angeles',country:'United States'}};
 export function useWeather(city){
- const [result,setResult]=useState({status:'loading'}),[revision,setRevision]=useState(0),[location,setLocation]=useState(null),[locationStatus,setLocationStatus]=useState(''),[locationError,setLocationError]=useState('');
+ const [result,setResult]=useState({status:'loading'}),[revision,setRevision]=useState(0),[location,setLocation]=useState(null),[locationStatus,setLocationStatus]=useState(''),[locationError,setLocationError]=useState(''),[mode,setMode]=useState(()=>{try{return localStorage.getItem('spreeai-weather-source')==='city'?'city':'location'}catch{return 'location'}});
+ const requestId=useRef(0);
+ function saveMode(value){setMode(value);try{localStorage.setItem('spreeai-weather-source',value)}catch{}}
+
  useEffect(()=>{
+  if(mode==='location'&&!location){setResult({status:'awaiting-location'});return;}
   const key=location?location.latitude+','+location.longitude:city.trim().toLowerCase(),cached=cache.get(key);
   if(cached&&Date.now()-cached.fetchedAt<30*60*1000&&revision===0){setResult(cached);return;}
   let active=true;
@@ -20,9 +24,10 @@ export function useWeather(city){
    if(active&&!controller.signal.aborted){cache.set(key,value);setResult(value);}
   })().catch(e=>{if(active)setResult({status:'error',error:e.name==='AbortError'?'Weather took too long to respond. Try again.':e.message})}).finally(()=>clearTimeout(timer));
   return()=>{active=false;controller.abort();clearTimeout(timer)};
- },[city,revision,location]);
- useEffect(()=>{setLocation(null)},[city]);
- function useCurrentLocation(){setLocationError('');if(!navigator.geolocation){setLocationError('Location is unavailable in this browser. Enter your city instead.');return;}setLocationStatus('locating');navigator.geolocation.getCurrentPosition(position=>{setLocation({latitude:Number(position.coords.latitude.toFixed(2)),longitude:Number(position.coords.longitude.toFixed(2)),name:'Current location',country:''});setLocationStatus('');},error=>{setLocationStatus('');setLocationError(error.code===1?'Location access was declined. You can enter your city instead.':'We couldn’t get your location. Try again or enter your city.');},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});}
+ },[city,revision,location,mode]);
+ function useCurrentLocation(){const id=++requestId.current;saveMode('location');setLocationError('');setLocation(null);if(!navigator.geolocation){setLocationStatus('');setLocationError('Location is unavailable in this browser. Enter your city instead.');return;}setLocationStatus('locating');navigator.geolocation.getCurrentPosition(position=>{if(id!==requestId.current)return;setLocation({latitude:Number(position.coords.latitude.toFixed(2)),longitude:Number(position.coords.longitude.toFixed(2)),name:'Current location',country:''});setLocationStatus('');},error=>{if(id!==requestId.current)return;setLocationStatus('');setLocationError(error.code===1?'Location access was declined. Allow location access in your browser or choose a city.':'We couldn’t get your location. Try again or choose a city.');},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});}
+ useEffect(()=>{if(mode==='location')useCurrentLocation();return()=>{requestId.current++;}},[]);
+ function selectCity(){requestId.current++;saveMode('city');setLocation(null);setLocationStatus('');setLocationError('');}
 
- return {...result,locationStatus,locationError,useCurrentLocation,clearLocation:()=>setLocation(null),usingLocation:!!location,refresh:()=>setRevision(x=>x+1)};
+ return {...result,locationStatus,locationError,useCurrentLocation,selectCity,placeLabel:result.place?.name||(mode==='city'?city:'Current location'),mode,clearLocation:selectCity,usingLocation:!!location,refresh:()=>mode==='location'?useCurrentLocation():setRevision(x=>x+1)};
 }
