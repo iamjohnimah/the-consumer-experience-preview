@@ -4,3 +4,5 @@ import App from './main.jsx';
 createRoot(document.getElementById('root')).render(<App/>);
 
 import "./local-review.css";
+
+import "./mobile-comfort.css";
