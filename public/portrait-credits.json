@@ -1,0 +1,411 @@
+{
+  "kim": {
+    "name": "Kim Kardashian",
+    "source": "https://en.wikipedia.org/wiki/Kim_Kardashian",
+    "file": "kim-portrait.jpg",
+    "imageMetadata": {
+      "continue": {
+        "iistart": "2025-03-15T02:46:01Z",
+        "continue": "||"
+      },
+      "query": {
+        "normalized": [
+          {
+            "from": "File:Kim_Kardashian_West_2014.jpg",
+            "to": "File:Kim Kardashian West 2014.jpg"
+          }
+        ],
+        "pages": {
+          "35331532": {
+            "pageid": 35331532,
+            "ns": 6,
+            "title": "File:Kim Kardashian West 2014.jpg",
+            "imagerepository": "local",
+            "imageinfo": [
+              {
+                "extmetadata": {
+                  "DateTime": {
+                    "value": "2025-03-20 00:16:17",
+                    "source": "mediawiki-metadata",
+                    "hidden": ""
+                  },
+                  "ObjectName": {
+                    "value": "Kim Kardashian West 2014",
+                    "source": "mediawiki-metadata"
+                  },
+                  "CommonsMetadataExtension": {
+                    "value": 1.2,
+                    "source": "extension",
+                    "hidden": ""
+                  },
+                  "Categories": {
+                    "value": "Flickr images verified by UploadWizard|Photographs by Eva Rinaldi|Kim Kardashian in 2014|Files from Eva Rinaldi Flickr stream",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "Assessments": {
+                    "value": "",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "ImageDescription": {
+                    "value": "Kim Kardashian West, Parramatta Westfield Sydney Australia",
+                    "source": "commons-desc-page"
+                  },
+                  "DateTimeOriginal": {
+                    "value": "2014-09-13 15:37:07",
+                    "source": "commons-desc-page"
+                  },
+                  "Credit": {
+                    "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/58820009@N05/15199017476/\">https://www.flickr.com/photos/58820009@N05/15199017476/</a>",
+                    "source": "commons-desc-page"
+                  },
+                  "Artist": {
+                    "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q37885816\" class=\"extiw\" title=\"d:Q37885816\"><span title=\"Australian photographer\">Eva Rinaldi</span></a></bdi>",
+                    "source": "commons-desc-page"
+                  },
+                  "LicenseShortName": {
+                    "value": "CC BY-SA 2.0",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "UsageTerms": {
+                    "value": "Creative Commons Attribution-Share Alike 2.0",
+                    "source": "commons-desc-page"
+                  },
+                  "AttributionRequired": {
+                    "value": "true",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "LicenseUrl": {
+                    "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                    "source": "commons-desc-page"
+                  },
+                  "Copyrighted": {
+                    "value": "True",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Restrictions": {
+                    "value": "",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "License": {
+                    "value": "cc-by-sa-2.0",
+                    "source": "commons-templates",
+                    "hidden": ""
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "zendaya": {
+    "name": "Zendaya",
+    "source": "https://en.wikipedia.org/wiki/Zendaya",
+    "file": "zendaya-portrait.jpg",
+    "imageMetadata": {
+      "batchcomplete": "",
+      "query": {
+        "pages": {
+          "195791244": {
+            "pageid": 195791244,
+            "ns": 6,
+            "title": "File:Zendaya-byPhilipRomano.jpg",
+            "imagerepository": "local",
+            "imageinfo": [
+              {
+                "extmetadata": {
+                  "DateTime": {
+                    "value": "2026-07-17 07:29:31",
+                    "source": "mediawiki-metadata",
+                    "hidden": ""
+                  },
+                  "ObjectName": {
+                    "value": "Zendaya-byPhilipRomano",
+                    "source": "mediawiki-metadata"
+                  },
+                  "CommonsMetadataExtension": {
+                    "value": 1.2,
+                    "source": "extension",
+                    "hidden": ""
+                  },
+                  "Categories": {
+                    "value": "Self-published work|WikiPortraits on Broadway in 2026|Zendaya at the premiere of The Odyssey (2026 film) in New York City",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "Assessments": {
+                    "value": "",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "ImageDescription": {
+                    "value": "<a href=\"https://en.wikipedia.org/wiki/Zendaya\" class=\"extiw\" title=\"w:Zendaya\">Zendaya</a> at the NYC Premiere of \"<a href=\"https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)\" class=\"extiw\" title=\"w:The Odyssey (2026 film)\">The Odyssey</a>\" - July 14, 2026",
+                    "source": "commons-desc-page"
+                  },
+                  "DateTimeOriginal": {
+                    "value": "2026-07-14 20:19:46",
+                    "source": "commons-desc-page"
+                  },
+                  "Credit": {
+                    "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                    "source": "commons-desc-page"
+                  },
+                  "Artist": {
+                    "value": "<a href=\"//commons.wikimedia.org/wiki/User:PhilipRomano\" title=\"User:PhilipRomano\">PhilipRomano</a>",
+                    "source": "commons-desc-page"
+                  },
+                  "LicenseShortName": {
+                    "value": "CC BY-SA 4.0",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "UsageTerms": {
+                    "value": "Creative Commons Attribution-Share Alike 4.0",
+                    "source": "commons-desc-page"
+                  },
+                  "AttributionRequired": {
+                    "value": "true",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "LicenseUrl": {
+                    "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "commons-desc-page"
+                  },
+                  "Copyrighted": {
+                    "value": "True",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Restrictions": {
+                    "value": "",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "License": {
+                    "value": "cc-by-sa-4.0",
+                    "source": "commons-templates",
+                    "hidden": ""
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "law": {
+    "name": "Law Roach",
+    "source": "https://en.wikipedia.org/wiki/Law_Roach",
+    "file": "law-portrait.jpg",
+    "imageMetadata": {
+      "batchcomplete": "",
+      "query": {
+        "normalized": [
+          {
+            "from": "File:Law_Roach_-_2024_(cropped).jpg",
+            "to": "File:Law Roach - 2024 (cropped).jpg"
+          }
+        ],
+        "pages": {
+          "154823979": {
+            "pageid": 154823979,
+            "ns": 6,
+            "title": "File:Law Roach - 2024 (cropped).jpg",
+            "imagerepository": "local",
+            "imageinfo": [
+              {
+                "extmetadata": {
+                  "DateTime": {
+                    "value": "2024-11-03 01:09:12",
+                    "source": "mediawiki-metadata",
+                    "hidden": ""
+                  },
+                  "ObjectName": {
+                    "value": "Law Roach - 2024 (cropped)",
+                    "source": "mediawiki-metadata"
+                  },
+                  "CommonsMetadataExtension": {
+                    "value": 1.2,
+                    "source": "extension",
+                    "hidden": ""
+                  },
+                  "Categories": {
+                    "value": "Extracted images|People of the United Kingdom in 2024|Law Roach|Files from the British Embassy, Washington Flickr stream",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "Assessments": {
+                    "value": "",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "ImageDescription": {
+                    "value": "Andrew Bolton OBE Honours Evening with Dame Anna Wintour in the United States on 30 October 2024",
+                    "source": "commons-desc-page"
+                  },
+                  "DateTimeOriginal": {
+                    "value": "2024-10-30 19:20:46",
+                    "source": "commons-desc-page"
+                  },
+                  "Credit": {
+                    "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/31430487@N05/54107343796/\">https://www.flickr.com/photos/31430487@N05/54107343796/</a>",
+                    "source": "commons-desc-page"
+                  },
+                  "Artist": {
+                    "value": "UKinUSA",
+                    "source": "commons-desc-page"
+                  },
+                  "LicenseShortName": {
+                    "value": "CC BY-SA 2.0",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "UsageTerms": {
+                    "value": "Creative Commons Attribution-Share Alike 2.0",
+                    "source": "commons-desc-page"
+                  },
+                  "AttributionRequired": {
+                    "value": "true",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "LicenseUrl": {
+                    "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                    "source": "commons-desc-page"
+                  },
+                  "Copyrighted": {
+                    "value": "True",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Restrictions": {
+                    "value": "",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "License": {
+                    "value": "cc-by-sa-2.0",
+                    "source": "commons-templates",
+                    "hidden": ""
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "emma": {
+    "name": "Emma Chamberlain",
+    "source": "https://en.wikipedia.org/wiki/Emma_Chamberlain",
+    "file": "emma-portrait.png",
+    "imageMetadata": {
+      "batchcomplete": "",
+      "query": {
+        "normalized": [
+          {
+            "from": "File:Emma_Chamberlain_for_Chamberlain_Coffee,_2020_(1).png",
+            "to": "File:Emma Chamberlain for Chamberlain Coffee, 2020 (1).png"
+          }
+        ],
+        "pages": {
+          "108024206": {
+            "pageid": 108024206,
+            "ns": 6,
+            "title": "File:Emma Chamberlain for Chamberlain Coffee, 2020 (1).png",
+            "imagerepository": "local",
+            "imageinfo": [
+              {
+                "extmetadata": {
+                  "DateTime": {
+                    "value": "2021-07-31 05:12:26",
+                    "source": "mediawiki-metadata",
+                    "hidden": ""
+                  },
+                  "ObjectName": {
+                    "value": "Emma Chamberlain for Chamberlain Coffee, 2020 (1)",
+                    "source": "mediawiki-metadata"
+                  },
+                  "CommonsMetadataExtension": {
+                    "value": 1.2,
+                    "source": "extension",
+                    "hidden": ""
+                  },
+                  "Categories": {
+                    "value": "Retouched pictures|Emma Chamberlain|Files from external sources with reviewed licenses|Videos from Vimeo",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "Assessments": {
+                    "value": "",
+                    "source": "commons-categories",
+                    "hidden": ""
+                  },
+                  "ImageDescription": {
+                    "value": "Emma Chamberlain in a video for Chamberlain Coffee in 2020",
+                    "source": "commons-desc-page"
+                  },
+                  "DateTimeOriginal": {
+                    "value": "2021-03-10 15:05",
+                    "source": "commons-desc-page"
+                  },
+                  "Credit": {
+                    "value": "<a href=\"//commons.wikimedia.org/wiki/Category:Vimeo\" title=\"Category:Vimeo\">Vimeo</a>: <a rel=\"nofollow\" class=\"external text\" data-mw-original-href=\"//vimeo.com/522034582\" href=\"https://vimeo.com/522034582\">Chamberlain Coffeeby Emma Chamberlain</a> (<a rel=\"nofollow\" class=\"external text\" href=\"//web.archive.org/web/*/https://vimeo.com/522034582\"><span style=\"color:#9602fc\">view archived source</span></a>)",
+                    "source": "commons-desc-page"
+                  },
+                  "Artist": {
+                    "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://vimeo.com/johnparkimage\">John Park</a>",
+                    "source": "commons-desc-page"
+                  },
+                  "LicenseShortName": {
+                    "value": "CC BY 3.0",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "UsageTerms": {
+                    "value": "Creative Commons Attribution 3.0",
+                    "source": "commons-desc-page"
+                  },
+                  "AttributionRequired": {
+                    "value": "true",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "LicenseUrl": {
+                    "value": "https://creativecommons.org/licenses/by/3.0",
+                    "source": "commons-desc-page"
+                  },
+                  "Copyrighted": {
+                    "value": "True",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "Restrictions": {
+                    "value": "",
+                    "source": "commons-desc-page",
+                    "hidden": ""
+                  },
+                  "License": {
+                    "value": "cc-by-3.0",
+                    "source": "commons-templates",
+                    "hidden": ""
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
