@@ -186,3 +186,10 @@
 .native-shop[data-theme=dark] .site-footer .footer-logo img{filter:invert(1)!important}.native-shop[data-theme=dark] .site-footer :is(.footer-column h2,.footer-follow h2,.footer-legal,.footer-build,.footer-socials a){color:#cbd2c3!important}.native-shop[data-theme=dark] .site-footer :is(.footer-thesis,.footer-follow,.footer-legal){border-color:#464e40!important}.native-shop[data-theme=dark] .department-tile span{color:#bcc5b2!important}.native-shop[data-theme=dark] .site-footer .language-trigger{background:#292e25!important;color:#eeeee8!important;border-color:#51594a!important}
 
 .native-shop .navrow nav button{font-weight:400!important}.native-shop .navrow nav button.active{font-weight:600!important}
+
+/* Phosphor outlines are filled paths, not stroked centerlines. */
+.native-shop .product-card .heart{width:44px;height:44px;background:#fff;border:0;box-shadow:none;color:#24221f}
+.native-shop .product-card .heart svg{width:24px;height:24px;fill:currentColor;stroke:none;stroke-width:0}
+.native-shop .product-card .heart[aria-pressed=true]{color:#e4384f}
+.native-shop .product-card .heart[aria-pressed=true] svg{fill:currentColor!important;stroke:none!important}
+.native-shop[data-theme=dark] .product-card .heart svg{fill:currentColor!important;stroke:none!important}
