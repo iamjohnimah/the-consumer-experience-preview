@@ -13,3 +13,9 @@
 .everyday-photo>img{object-fit:cover!important}
 
 .standalone-mobile-logo{display:none}@media(max-width:900px){.standalone-mobile-logo{display:flex;padding:20px 24px;width:100%;align-items:center}.standalone-mobile-logo img{width:140px;height:auto}.dark .standalone-mobile-logo img{filter:invert(1)}}
+
+/* Home shortcuts occupy the former editorial image panel. */
+.everyday-look>.everyday-destinations{grid-template-columns:minmax(0,1fr);align-content:center;gap:16px;margin:0;padding:32px;border-left:1px solid var(--line);background:var(--paper);min-width:0}
+.everyday-destinations>button{min-height:116px;width:100%}
+.everyday-destinations>button>svg:first-child{display:block}
+@media(max-width:600px){.everyday-look>.everyday-destinations{padding:22px;border-left:0;border-top:1px solid var(--line);gap:12px}.everyday-destinations>button{min-height:100px}}
