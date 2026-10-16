@@ -1,10 +1,9 @@
 import React from 'react';
 import {ArrowRight,CoatHanger,Camera,CalendarBlank,Check} from '@phosphor-icons/react';
-import poster from './assets/freja/poster.jpg';
 import './home-welcome.css';
 
 export function HomeWelcome({onCloset,onShop,onGuide,weather}){
- return <><section className="home-welcome cinematic-home" aria-label="Welcome to SPREEAI"><video className="today-hero-film" autoPlay muted playsInline loop preload="auto" poster={import.meta.env.BASE_URL+'assets/malik-hero.png'} src={import.meta.env.BASE_URL+'assets/malik-hero.mp4'} aria-label="Malik models Nigerian traditional wear, streetwear and a tailored suit"/><div className="hero-weather-position">{weather}</div><div className="home-welcome-story"><p className="eyebrow">YOUR STYLE. YOUR POSSIBILITIES.</p><h1>Your style.<br/>Made simple.</h1><p>Your closet, curated. Your next look, already on you.<br/>A little more possibility, every day.</p><div className="home-welcome-actions"><button className="btn primary" onClick={onCloset}><CoatHanger/> Open my closet</button><button className="btn" onClick={onShop}>Explore the shop <ArrowRight/></button></div></div></section></>
+ return <><section className="home-welcome cinematic-home" aria-label="Welcome to SPREEAI"><div className="hero-weather-position">{weather}</div><div className="home-welcome-story"><p className="eyebrow">YOUR STYLE. YOUR POSSIBILITIES.</p><h1>Your style.<br/>Made simple.</h1><p>Your closet, curated. Your next look, already on you.<br/>A little more possibility, every day.</p><div className="home-welcome-actions"><button className="btn primary" onClick={onCloset}><CoatHanger/> Open my closet</button><button className="btn" onClick={onShop}>Explore the shop <ArrowRight/></button></div></div></section></>
 }
 
 export function SetupGuide({owned,hasPreview,plans,onAdd,onTry,onPlan,onSkip}){
