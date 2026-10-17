@@ -2,7 +2,7 @@ import React from 'react';
 import {ArrowRight,Check} from '@phosphor-icons/react';
 export function TaskGuide({title,steps}){return <details className="task-guide"><summary>How to {title.toLowerCase()}</summary><ol>{steps.map(step=><li key={step}>{step}</li>)}</ol></details>}
 
-export const pageGuides={saved:{name:'Saved',text:'Collect pieces and saved outfits in named lookbooks. Your edits stay in this browser.'},
+export const pageGuides={
  today:{name:'Today',title:'Start with what you need today.',text:'An outfit idea, your closet and a little inspiration. Choose one place to start.',steps:['Open your closet to add clothes you already own.','Build today’s outfit or refresh it for another idea.','Save a look to your planner when you want to wear it.'],action:'Open my closet',destination:'closet'},
  closet:{name:'Closet',title:'Everything you wear, together.',text:'Owned is what you have. Purchases is what you imported. Wishlist is what you might buy.',steps:['Add a piece with a photo and a name, or review sample receipt imports.','Open a garment to view its details and styling options.','Build an outfit and save your favorite combinations.'],action:'Set up my fitting profile',destination:'profile'},
  shop:{name:'Shop',title:'Find it. See it on you. Decide.',text:'Browse real product snapshots. Open any garment for the available fitting and styling tools.',steps:['Narrow the selection by category, brand or search.','Open a garment to try it on, compare pieces or build an outfit.','Shop at the brand opens the retailer’s website to purchase.'],action:'Set up my fitting profile',destination:'profile'},
