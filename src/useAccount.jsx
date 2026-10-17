@@ -1,10 +1,11 @@
+import {backupBeforeRelease} from './releaseSafety.mjs';
 import {useState,useEffect,useRef} from 'react';
 import {persistPreview,previewSocial,previewAction} from './preview.mjs';
 // Device drafts only. Hosted account services remain in the private app.
 export function useAccount(state,setState) {
  const [saveStatus,setSaveStatus]=useState('Saved in this browser');
  const latest=useRef(state);latest.current=state;
- function save(){try{persistPreview(localStorage,latest.current);setSaveStatus('Saved in this browser')}catch{setSaveStatus('Browser storage is full or unavailable. Export your wardrobe from Profile to keep a copy.')}}
+ function save(){try{if(!backupBeforeRelease(localStorage,'spreeai-consumer-public-v1')){setSaveStatus('Your previous wardrobe could not be backed up. Free browser storage before saving.');return}persistPreview(localStorage,latest.current);setSaveStatus('Saved in this browser')}catch{setSaveStatus('Browser storage is full or unavailable. Export your wardrobe from Profile to keep a copy.')}}
  useEffect(()=>{const timer=setTimeout(save,300);return()=>clearTimeout(timer)},[state]);
  // Flush pending device changes before a fast refresh or leaving the page.
  useEffect(()=>{const hidden=()=>{if(document.hidden)save()};window.addEventListener('pagehide',save);document.addEventListener('visibilitychange',hidden);return()=>{window.removeEventListener('pagehide',save);document.removeEventListener('visibilitychange',hidden)}},[]);
