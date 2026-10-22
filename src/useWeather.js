@@ -3,7 +3,7 @@ import {normalizeForecast} from './weather.mjs';
 const cache=new Map();
 const known={paris:{latitude:48.8534,longitude:2.3488,name:'Paris',country:'France'},london:{latitude:51.5085,longitude:-.1257,name:'London',country:'United Kingdom'},'new york':{latitude:40.7143,longitude:-74.006,name:'New York',country:'United States'},'los angeles':{latitude:34.0522,longitude:-118.2437,name:'Los Angeles',country:'United States'}};
 export function useWeather(city){
- const [result,setResult]=useState({status:'loading'}),[revision,setRevision]=useState(0),[location,setLocation]=useState(null),[locationStatus,setLocationStatus]=useState(''),[locationError,setLocationError]=useState(''),[locationRevision,setLocationRevision]=useState(0),[mode,setMode]=useState(()=>{try{return localStorage.getItem('spreeai-weather-source')==='city'?'city':'location'}catch{return 'location'}});
+ const [result,setResult]=useState({status:'loading'}),[revision,setRevision]=useState(0),[location,setLocation]=useState(null),[locationStatus,setLocationStatus]=useState(''),[locationError,setLocationError]=useState(''),[locationRevision,setLocationRevision]=useState(0),[mode,setMode]=useState(()=>{try{return localStorage.getItem('spreeai-weather-source')==='location'?'location':'city'}catch{return 'city'}});
  const requestId=useRef(0);
  function saveMode(value){setMode(value);try{localStorage.setItem('spreeai-weather-source',value)}catch{}}
 
@@ -43,5 +43,5 @@ export function useWeather(city){
  },[mode,locationRevision]);
  function selectCity(){requestId.current++;saveMode('city');setLocation(null);setLocationStatus('');setLocationError('');}
 
- return {...result,locationStatus,locationError,useCurrentLocation,selectCity,placeLabel:result.place?.name||(mode==='city'?city:'Finding your city…'),mode,clearLocation:selectCity,usingLocation:!!location,refresh:()=>{setRevision(x=>x+1);if(mode==='location')useCurrentLocation()}};
+ return {...result,locationStatus,locationError,useCurrentLocation,selectCity,placeLabel:result.place?.name||(mode==='city'?city:locationStatus==='locating'?'Finding your city…':'Choose your location'),mode,clearLocation:selectCity,usingLocation:!!location,refresh:()=>{setRevision(x=>x+1);if(mode==='location')useCurrentLocation()}};
 }
