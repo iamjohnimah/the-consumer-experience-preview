@@ -1,9 +1,6 @@
 import React,{useEffect,useRef,useState} from 'react';
 import {asset} from './preview.mjs';
 import './skincare.css';
-export function ExperienceCategories({skincare=false}){
- return <nav className="experience-categories" aria-label="Experience category"><a href="#/today" aria-current={!skincare?'page':undefined}>Fashion</a><a href="#/skincare" aria-current={skincare?'page':undefined}>Skincare</a><span>Your everyday, together.</span></nav>;
-}
 export default function Skincare({dark,onAppearanceChange}){
  const frame=useRef(null),[ready,setReady]=useState(false),[height,setHeight]=useState(700);
  const syncAppearance=()=>frame.current?.contentWindow?.postMessage({type:'spreeai:appearance',dark},location.origin);

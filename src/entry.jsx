@@ -8,3 +8,5 @@ import "./local-review.css";
 import "./mobile-comfort.css";
 
 import './weather-panel.css';
+
+import './mobile-layout.css';

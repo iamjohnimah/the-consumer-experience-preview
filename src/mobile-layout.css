@@ -1,0 +1,52 @@
+/* Final responsive rules: content reflows; only intentional carousels scroll. */
+.app .workspace,.app .workspace>main,.app .workspace>main>*,.modal>*,.skincare-category{min-width:0}
+.app :where(h1,h2,h3,p,label,strong),.modal :where(h1,h2,h3,p,label,strong){overflow-wrap:anywhere}
+.app video,.modal video{max-width:100%}
+@media(max-width:900px){
+ .app .workspace{width:100%;max-width:100%;margin-left:0}
+ .app .workspace>main{width:100%;max-width:100%;padding-inline:clamp(16px,4vw,28px);padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+ .app .btn,.modal .btn{max-width:100%;height:auto;white-space:normal;overflow-wrap:anywhere;text-align:center}
+ .app button>svg,.modal button>svg{flex-shrink:0}
+ .app .between,.app .toolbar,.modal .toolbar,.app .button-row,.modal .button-row{flex-wrap:wrap}
+ .app .chips>button,.modal .chips>button{flex-shrink:0}
+ .app .workspace footer,.app .workspace footer>div{flex-wrap:wrap;gap:12px}
+ .modal{max-width:calc(100% - 24px);max-height:calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow-y:auto;overscroll-behavior-y:contain}
+ .modal :where(input,select,textarea),.app :where(input,select,textarea){max-width:100%;min-width:0}
+ .app .consumer-shop-search input,.app .discover-search input{width:100%;min-width:0}
+ .app .native-shop .toolbar>div,.app .native-shop .toolbar>label{min-width:0;max-width:100%}
+ .app .native-shop .toolbar select{max-width:100%}
+}
+@media(max-width:700px){
+ [data-page=today] .home-welcome.cinematic-home{display:grid!important;grid-template-columns:minmax(0,1fr);padding:clamp(18px,5vw,26px)}
+ [data-page=today] .cinematic-home h1{font-size:clamp(34px,9vw,42px)}
+ .app .page-title h1,.modal>h2{font-size:clamp(28px,8vw,38px);line-height:1.12}
+ .app .home-welcome-actions,.app .setup-invite-actions{width:100%;min-width:0}
+ .app .setup-invite-actions>*{max-width:100%;white-space:normal}
+ /* Film copy has its own surface so neither captions nor the subject get cropped. */
+ .app .closet-intro-film{height:auto;min-height:0}
+ .app .closet-intro-film:after{display:none}
+ .app .closet-intro-film video{position:relative;inset:auto;display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:var(--surface)}
+ .app .closet-intro-film>div{position:relative;padding:20px;background:var(--surface);color:var(--ink)}
+ .app .closet-intro-film :where(h2,p){color:var(--ink)}
+ .app .closet-intro-film h2{font-size:clamp(27px,7vw,34px);line-height:1.12}
+ .app .closet-intro-film p{font-size:16px;line-height:1.5}
+ .app .closet-intro-film br{display:none}
+ .app .shop-film-visual{aspect-ratio:16/9;min-height:0}
+ .app .shop-film-visual video{object-fit:contain;object-position:center}
+ .app .shop-film-copy{position:relative;inset:auto;padding:20px;max-width:100%}
+ .app .shop-film-copy h2{font-size:clamp(27px,7vw,34px)}
+ .app .shop-film-copy>p:not(.eyebrow){max-width:100%}
+ .app .df-media:has(>video){height:auto;min-height:0;background:var(--surface)}
+ .app .df-media>video,.app .brand-feed-film{display:block;width:100%;height:auto;max-height:75svh;object-fit:contain}
+ .app .publisher-video{width:100%;aspect-ratio:16/9;height:auto}
+ .app .publisher-video iframe{width:100%;height:100%}
+ .app .df-card header>div,.app .df-copy,.app .event-details>div{min-width:0}
+ .app .df-social-actions{flex-wrap:wrap}
+ .app .df-social-actions button{flex:1 1 60px;white-space:normal}
+ .app .event-image .event-flyer-title{font-size:clamp(25px,7vw,34px);max-width:calc(100% - 40px);left:20px}
+ .app .skincare-frame{max-width:100%;border-radius:12px}
+ .app .skincare-heading details{max-width:100%}
+ .app .compare-tray,.app .consumer-compare-tray{max-width:calc(100% - 24px);flex-wrap:wrap;white-space:normal;bottom:calc(78px + env(safe-area-inset-bottom))}
+ .app .toast{max-width:calc(100% - 24px);white-space:normal;overflow-wrap:anywhere;bottom:calc(80px + env(safe-area-inset-bottom))}
+ .mobile-nav{padding-inline:max(7px,env(safe-area-inset-left));padding-bottom:max(6px,env(safe-area-inset-bottom))}
+}
